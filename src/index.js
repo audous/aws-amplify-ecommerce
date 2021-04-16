@@ -18,6 +18,8 @@ import awsconfig from './aws-exports'
 
 import HourGlass from './HourGlass/HourGlass'
 
+import 'fontsource-roboto';
+
 Amplify.configure(awsconfig)
 
 Analytics.record('Store_Load');
