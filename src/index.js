@@ -15,6 +15,9 @@ import Checkout from './pages/Checkout'
 import PlacedOrder from './pages/PlacedOrder'
 
 import awsconfig from './aws-exports'
+
+import HourGlass from './HourGlass/HourGlass'
+
 Amplify.configure(awsconfig)
 
 Analytics.record('Store_Load');
@@ -29,6 +32,9 @@ const routing = (
         <Router>
             <Switch>
                 <Route exact path="/" component={App} />
+
+                <Route path="/hourglass" component={HourGlass} />
+
                 <Route path="/product/:id" component={Product} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/ordercomplete" component={PlacedOrder}/>
